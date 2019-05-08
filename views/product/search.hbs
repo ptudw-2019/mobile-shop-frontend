@@ -1,0 +1,58 @@
+<div class="bg-light py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-0"><a href="/">Trang chủ</a> <span class="mx-2 mb-0">/</span>
+                <strong class="text-black">{{title}}</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 mb-5 mb-md-0">
+                <h2 class="h3 mb-3 text-black">{{title}}</h2>
+                <div class="p-3 p-lg-5 border">
+                    <div class="form-group row">
+                        <div class="col-sm">
+                            <label for="c_name" class="text-black">Tên sản phẩm</label>
+                            <input type="text" class="form-control" id="c_name" name="c_name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label for="c_brand" class="text-black">Thương hiệu</label>
+                            <select id="c_brand" class="form-control">
+                                <option value="all">Tất cả</option>
+                                {{#each data.brands}}
+                                <option value="{{this}}">{{this}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label for="c_brand" class="text-black">Dung lượng RAM</label>
+                            <select id="c_brand" class="form-control">
+                                <option value="all">Tất cả</option>
+                                {{#each data.ram}}
+                                <option value="{{this}}">{{this}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='#'">Tìm
+                            kiếm</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- </form> -->
+    </div>
+</div>

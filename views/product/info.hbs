@@ -1,0 +1,125 @@
+<div class="bg-light py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-0"><a href="/">Trang chủ</a> <span class="mx-2 mb-0">/</span> 
+                <a href=".">{{data.brand}}</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">{{title}}</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/images/iphoneXSMax.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-black">{{data.name}}</h2>
+                <p><strong class="text-primary h4">{{data.price}}</strong></p>
+                <ul>
+                    {{#each data.shortInfo}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+                <span class="text-black">Chọn màu:</span>
+                <div class="mb-1 d-flex">
+                    {{#each data.color}}
+                    <label for="{{this}}" class="d-flex mr-3 mb-3">
+                        <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio"
+                                id="{{this}}" name="color"></span> <span
+                            class="d-inline-block text-black">{{this}}</span>
+                    </label>
+                    {{/each}}
+                </div>
+                <div class="mb-5">
+                    <div class="input-group mb-3" style="max-width: 120px;">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                        </div>
+                        <input type="text" class="form-control text-center" value="1" placeholder=""
+                            aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                        </div>
+                    </div>
+
+                </div>
+                <p><a href="/cart" class="buy-now btn btn-sm btn-primary">Thêm vào giỏ hàng</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section block-3 site-blocks-2 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7 site-section-heading text-center pt-4">
+                <h2>Thông tin chi tiết</h2>
+            </div>
+        </div>
+        <table id="chi-tiet" cellspacing="0" class="table table-bordered table-detail table-striped">
+            <colgroup>
+                <col style="width: 25%;">
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td>Thương hiệu</td>
+                    <td>
+                        <a href=".">{{data.brand}}</a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kích thước màn hình</td>
+                    <td>
+                        {{data.info.screen}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hệ điều hành</td>
+                    <td>
+                        {{data.info.os}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Camera trước</td>
+                    <td>
+                        {{data.info.frontCamera}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Camera sau</td>
+                    <td>
+                        {{data.info.backCamera}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bộ nhớ RAM</td>
+                    <td>
+                        {{data.info.ram}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bộ nhớ trong</td>
+                    <td>
+                        {{data.info.rom}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dung lượng pin</td>
+                    <td>
+                        {{data.info.pin}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Số khe sim</td>
+                    <td>
+                        {{data.info.sim}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

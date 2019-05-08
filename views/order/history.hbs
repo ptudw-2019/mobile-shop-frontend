@@ -1,0 +1,40 @@
+<div class="bg-light py-3">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 mb-0"><a href="/">Trang chủ</a> <span class="mx-2 mb-0">/</span> <strong
+                    class="text-black">{{title}}</strong></div>
+        </div>
+    </div>
+</div>
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Mã đơn hàng</th>
+                        <th scope="col">Ngày mua</th>
+                        <th scope="col">Tổng tiền</th>
+                        <th scope="col">Trạng thái
+                            đơn hàng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each data}}
+                    <tr>
+                        <th scope="row">{{this.id}}</th>
+                        <td>{{this.date}}</td>
+                        <td>{{this.total}}</td>
+                        <td>{{this.status}}</td>
+                    </tr>
+                    {{else}}
+                    <tr>
+                        <th align="right" colspan="4">Chưa có đơn hàng nào</th>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
