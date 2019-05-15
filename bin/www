@@ -10,13 +10,11 @@ var http = require('http');
 const {initdb} = require('../dbs');
 
 var server;
-
+var port = normalizePort(process.env.PORT || '3001');
 initdb().then(() => {
   /**
    * Get port from environment and store in Express.
    */
-
-  var port = normalizePort(process.env.PORT || '3000');
   app.set('port', port);
 
   /**
