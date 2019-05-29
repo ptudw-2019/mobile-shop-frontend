@@ -5,6 +5,7 @@
                 <div class="intro-text text-center text-md-left">
                     <p>
                         <a href="#" class="btn btn-sm btn-primary">Mua ngay</a>
+                        [{{user.email}}]
                     </p>
                 </div>
             </div>
@@ -50,16 +51,16 @@
     <div class="container">
         <div class="row">
             {{#each topBrand}}
-            <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay={{this.delay}}>
-                <a class="block-2-item" href="#">
-                    <figure class="image">
-                        <img src={{this.image}} alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                        <h3>{{this.name}}</h3>
-                    </div>
-                </a>
-            </div>
+                <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay={{this.delay}}>
+                    <a class="block-2-item" href="#">
+                        <figure class="image">
+                            <img src={{this.image}} alt="" class="img-fluid">
+                        </figure>
+                        <div class="text">
+                            <h3>{{this.name}}</h3>
+                        </div>
+                    </a>
+                </div>
             {{/each}}
         </div>
     </div>
@@ -76,19 +77,19 @@
             <div class="col-md-12">
                 <div class="nonloop-block-3 owl-carousel">
                     {{#each hotItems}}
-                    <div class="item">
-                        <a href="/product{{this.uri}}">
-                            <div class="block-4 text-center">
-                                <figure class="block-4-image">
-                                    <img src={{this.image}} alt="Image placeholder" class="img-fluid">
-                                </figure>
-                                <div class="block-4-text p-4">
-                                    <h3>{{this.name}}</h3>
-                                    <p class="text-primary font-weight-bold">{{this.price}} đ</p>
+                        <div class="item">
+                            <a href="/product{{this.uri}}">
+                                <div class="block-4 text-center">
+                                    <figure class="block-4-image">
+                                        <img src={{this.image}} alt="Image placeholder" class="img-fluid">
+                                    </figure>
+                                    <div class="block-4-text p-4">
+                                        <h3>{{this.name}}</h3>
+                                        <p class="text-primary font-weight-bold">{{this.price}} đ</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
                     {{/each}}
                 </div>
             </div>

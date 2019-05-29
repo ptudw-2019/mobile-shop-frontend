@@ -14,38 +14,39 @@
             <div class="col-md-6 mb-5 mb-md-0">
                 <h2 class="h3 mb-3 text-black">{{title}}</h2>
                 <div class="p-3 p-lg-5 border">
-                    <div class="form-group row">
-                        <div class="col-sm">
-                            <label for="c_username" class="text-black">Tên đăng nhập <span
-                                    class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="c_username" name="c_username">
+                    <form method="post">
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <label for="email" class="text-black">Tên đăng nhập <span
+                                        class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group row">
-                        <div class="col-md-12">
-                            <label for="c_password" class="text-black">Mật khẩu <span
-                                    class="text-danger">*</span></label>
-                            <input type="password" class="form-control" id="c_password" name="c_password"
-                                placeholder="Địa chỉ và tên đường">
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <label for="password" class="text-black">Mật khẩu <span
+                                        class="text-danger">*</span></label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                       placeholder="Mật khẩu">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm 6 text-right">
-                            <a href="/recover">Quên mật khẩu</a>
+                        <div class="form-group row">
+                            <div class="col-sm 6 text-right">
+                                <a href="/recover">Quên mật khẩu</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md">
-                            <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='/'">Đăng
-                                nhập</button>
+                        <div class="form-group row">
+                            <div class="col-md">
+                                <input type="submit" class="btn btn-primary btn-lg py-3 btn-block" value="Đăng nhập">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm text-center">
-                            Chưa có tài khoản? <a href="/register">Tạo tài khoản mới</a>
+                        <div class="form-group row">
+                            <div class="col-sm text-center">
+                                Chưa có tài khoản? <a href="/register">Tạo tài khoản mới</a>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
