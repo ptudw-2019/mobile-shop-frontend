@@ -1,4 +1,3 @@
-
 const ObjectId = require('mongodb').ObjectId;
 const bcrypt = require('bcrypt');
 const {dbs} = require('../dbs');
@@ -23,6 +22,15 @@ exports.verify = async (username, password) => {
 const get = async (email) => {
   return await dbs.production.collection(USERS).findOne({email});
 };
+
+const check = async (email) => {
+  const user = await dbs.production.collection(USERS).findOne({email});
+  if (user)
+    return true;
+  return false;
+};
+
+exports.check = check;
 
 exports.get = get;
 

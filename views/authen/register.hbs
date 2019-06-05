@@ -15,6 +15,7 @@
                 <h2 class="h3 mb-3 text-black">{{title}}</h2>
                 <div class="p-3 p-lg-5 border">
                     {{message}}
+                    <div class="ui-state-error" id="error-message"></div>
                     <form method="post">
                         <div class="form-group row mb-5">
                             <div class="col-md">
@@ -32,7 +33,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-md">
-                                <input class="btn btn-primary btn-lg py-3 btn-block" type="submit" value="TẠO TÀI KHOẢN">
+                                <input id="register" class="btn btn-primary btn-lg py-3 btn-block" type="submit" value="TẠO TÀI KHOẢN">
                             </div>
                         </div>
                     </form>
@@ -41,3 +42,20 @@
         </div>
     </div>
 </div>
+
+{{#extend "scripts"}}
+    <script>
+        $('#email').keyup(function() {
+            $.getJSON('/api/user/check?email='+$('#email').val(), function (data){
+              if (data) {
+                  $('#error-message').html('Email đã tồn tại. Vui lòng chọn email khác.');
+                  $("#register").attr("disabled", true);
+              }
+              else {
+                  $('#error-message').html('');
+                  $("#register").attr("disabled", false);
+              }
+            })
+        });
+    </script>
+{{/extend}}
